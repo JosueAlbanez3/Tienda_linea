@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos para la validación global */
+.input-error-global {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* Mejorar inputs number */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* index.css - Agrega al final del archivo */
+
+/* Estilos para la validación global */
+input[data-validation-type="numeric"] {
+  -moz-appearance: textfield;
+}
+
+input[data-validation-type="numeric"]::-webkit-outer-spin-button,
+input[data-validation-type="numeric"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Feedback visual para inputs inválidos */
+input:invalid, textarea:invalid {
+  border-color: #f56565 !important;
+}
+
+/* Estilos para inputs con validación específica */
+input[data-validation-type="text"] {
+  text-transform: capitalize;
+}
+
+input[data-validation-type="email"] {
+  text-transform: lowercase;
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
