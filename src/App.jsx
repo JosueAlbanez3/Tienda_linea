@@ -14,8 +14,9 @@ import Profile from './pages/Profile';
 import Addresses from './pages/Addresses';
 import Subscriptions from './pages/Subscriptions';
 import Security from './pages/Security';
-import AdminPanel from './pages/AdminPanel'; // ← Agrega esta importación
+import AdminPanel from './pages/AdminPanel';
 import NotificationContainer from './components/NotificationContainer';
+import ChatBot from './components/ChatBot'; // ← Agrega esta importación
 import { useAnalytics } from './hooks/useAnalytics';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
     <div className="min-h-screen bg-background">
       <Navbar />
       <NotificationContainer />
+      <ChatBot /> {/* ← Agrega esta línea */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/productos" element={<Products />} />
